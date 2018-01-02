@@ -4,7 +4,7 @@
 #cython: cdivision=True
 
 # Author: Jake Vanderplas <vanderplas@astro.washington.edu>
-# Licence: BSD 3 clause
+# License: BSD 3 clause
 
 __all__ = ['BallTree']
 
@@ -29,6 +29,7 @@ cdef class BallTree(BinaryTree):
     __doc__ = CLASS_DOC.format(**DOC_DICT)
     pass
 
+
 #----------------------------------------------------------------------
 # The functions below specialized the Binary Tree as a Ball Tree
 #
@@ -38,7 +39,6 @@ cdef class BallTree(BinaryTree):
 #   relative rankings of the true distance.  For example, the reduced
 #   distance for the Euclidean metric is the squared-euclidean distance.
 #   For some metrics, the reduced distance is simply the distance.
-
 
 cdef int allocate_data(BinaryTree tree, ITYPE_t n_nodes,
                        ITYPE_t n_features) except -1:
